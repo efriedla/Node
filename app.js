@@ -14,6 +14,13 @@ app.get("/", function(req, res){
     res.render("home");
 });
 
+var todos = ["eat", "sleep", "blink"];
+app.get("/todo", function(req, res){
+    
+    res.render("todo", {todos: todos});
+});
+
+
 // "error message" 
 app.get("*", function(req, res){
     res.send("Hey beautiful, make a wrong turn?");
