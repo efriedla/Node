@@ -1,9 +1,6 @@
 var express = require("express");
 var app = express();
 var request = require("request");
-/**
- * helps grab the form 
- */
 var bodyparser = require("body-parser");
 
 app.use(bodyparser.urlencoded({extended: true}));
@@ -18,9 +15,14 @@ app.get("/", function(req, res){
     res.render("home");
 });
 
-var todos = ["eat", "sleep", "blink"];
+var todos = [
+    {task: "eat"},
+    {task: "sleep"},
+    {task: "blink"}
+];
 app.get("/todo", function(req, res){
     res.render("todo", {todos: todos});
+    console.log(todos.task);
 });
 /**
  * add to todo
