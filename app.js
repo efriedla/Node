@@ -1,12 +1,16 @@
 var express = require("express");
 var app = express();
 var request = require("request");
-//helps grab form 
+/**
+ * helps grab the form 
+ */
 var bodyparser = require("body-parser");
 
 app.use(bodyparser.urlencoded({extended: true}));
 app.use(express.static("public"));
-// renders home.ejs as home already knows to add ejs
+/**
+ * renders home.ejs as home already knows to add ejs
+ */ 
 app.set("view engine", "ejs");
 
 
@@ -16,17 +20,20 @@ app.get("/", function(req, res){
 
 var todos = ["eat", "sleep", "blink"];
 app.get("/todo", function(req, res){
-    
     res.render("todo", {todos: todos});
 });
-//add to todo
+/**
+ * add to todo
+ */
 app.post("/addtodo", function(req, res){
     var newTodo = req.body.newtodo;
     todos.push(newTodo);
     res.redirect("/todo");
 });
 
-// "error message" 
+/** 
+* "error message" 
+*/
 app.get("*", function(req, res){
     res.send("Hey beautiful, make a wrong turn?");
 });
