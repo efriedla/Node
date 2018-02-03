@@ -5,4 +5,10 @@
     <p><%= task %></p>
 <% }); %>
 
+<form action="/addtodo" method="POST">
+    <input type="text" name="newtodo" placeholder="task">
+    <button>add</button>
+    
+</form>
+
 <% include partials/footer%>

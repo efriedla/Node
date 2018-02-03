@@ -19,12 +19,16 @@ app.get("/todo", function(req, res){
     
     res.render("todo", {todos: todos});
 });
-
+//add to todo
+app.post("/addtodo", function(req, res){
+    var newTodo = req.body.newtodo;
+    todos.push(newTodo);
+    res.redirect("/todo");
+});
 
 // "error message" 
 app.get("*", function(req, res){
     res.send("Hey beautiful, make a wrong turn?");
-    console.log("someones lost");
 });
 
 
