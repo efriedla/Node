@@ -29,7 +29,7 @@ app.get("/todo", function(req, res){
  */
 app.post("/addtodo", function(req, res){
     var newTodo = req.body.newtodo;
-    todos.push(newTodo);
+    todos.push({task : newTodo});
     res.redirect("/todo");
 });
 
