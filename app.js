@@ -47,11 +47,6 @@ app.get("/", function(req, res){
     res.render("home");
 });
 
-// var todos = [
-//     {task: "eat"},
-//     {task: "sleep"},
-//     {task: "blink"}
-// ];
 app.get("/todo", function(req, res){
     Task.find({}, function(err, todos){
         if(err){
@@ -59,17 +54,22 @@ app.get("/todo", function(req, res){
         }else{
             res.render("todo", {todos: todos});
         }
-    })
-    // res.render("todo", {todos: todos});
-    // console.log(todos.task);
+    });
 });
 /**
  * add to todo
  */
 app.post("/addtodo", function(req, res){
     var newTodo = req.body.newtodo;
-    todos.push({task : newTodo});
-    res.redirect("/todo");
+    var myTodo = {task: newTodo};
+    // todos.push({task : newTodo});
+    Task.create(myTodo, function(err, newTask){
+        if(err){
+            console.log(err);
+        }else{
+            res.redirect("/todo");
+        }
+    }); 
 });
 
 /** 
