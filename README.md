@@ -17,6 +17,6 @@ name         url            verb      desc.
 ============================================================
 index   /todo         Get         shows all Tasks in db
 New     /todo       Post        shows form to add new Task
-Create  /todo        Post        Posts to task in db
+Create  /addtodo        Post        Posts to task in db
 Show    /todo/:id    Get         Shows info of one Task
 ```
