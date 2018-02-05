@@ -12,6 +12,16 @@ app.use(express.static("public"));
  */ 
 app.set("view engine", "ejs");
 
+var Schema = mongoose.Schema,
+ObjectId = Schema.ObjectId; 
+
+var taskSchema = new Schema({
+task: String,
+complete: False
+});
+
+var Task = mongoose.model('Task', taskSchema);
+
 
 app.get("/", function(req, res){
     res.render("home");
