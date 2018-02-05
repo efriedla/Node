@@ -62,7 +62,6 @@ app.get("/todo", function(req, res){
 app.post("/addtodo", function(req, res){
     var newTodo = req.body.newtodo;
     var myTodo = {task: newTodo};
-    // todos.push({task : newTodo});
     Task.create(myTodo, function(err, newTask){
         if(err){
             console.log(err);
@@ -70,6 +69,12 @@ app.post("/addtodo", function(req, res){
             res.redirect("/todo");
         }
     }); 
+});
+/**
+ * Show todo
+ */
+app.get("/todo/:id", function(req, res){
+    res.render("show");
 });
 
 /** 
