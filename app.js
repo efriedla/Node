@@ -16,11 +16,30 @@ var Schema = mongoose.Schema,
 ObjectId = Schema.ObjectId; 
 
 var taskSchema = new Schema({
-task: String,
-complete: False
+task: String
 });
 
 var Task = mongoose.model('Task', taskSchema);
+
+Task.create({
+    task: "eat"
+      
+}, function(err, task){
+    if(err){
+        console.log(err);
+    }else{
+        console.log(task);
+    }
+});
+Task.find({}, function(err, tasks){
+    if(err){
+        console.log("nooo");
+        console.log(err)
+    }else{
+        console.log("here are my cats");
+        console.log(tasks);
+    }
+});
 
 
 app.get("/", function(req, res){
