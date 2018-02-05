@@ -74,7 +74,14 @@ app.post("/addtodo", function(req, res){
  * Show todo
  */
 app.get("/todo/:id", function(req, res){
-    res.render("show");
+    Task.findById(req.params.id, function(err, found){
+        if(err){
+            console.log(err);
+        }else{
+            res.render("show", {todo: found});
+            console.log(found);
+        }
+    })
 });
 
 /** 
