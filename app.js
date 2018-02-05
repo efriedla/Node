@@ -79,7 +79,6 @@ app.get("/todo/:id", function(req, res){
             console.log(err);
         }else{
             res.render("show", {todo: found});
-            console.log(found);
         }
     })
 });
