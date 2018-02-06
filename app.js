@@ -1,3 +1,4 @@
+var methodOverride = require('method-override');
 var express = require("express");
 var app = express();
 var request = require("request");
@@ -7,6 +8,7 @@ mongoose.connect('mongodb://localhost/practice');
 
 app.use(bodyparser.urlencoded({extended: true}));
 app.use(express.static("public"));
+app.use(methodOverride('_method'));
 /**
  * renders home.ejs as home already knows to add ejs
  */ 

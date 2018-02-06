@@ -6,6 +6,7 @@ ejs
 body-parser
 request
 mongoose
+method-override
 ```
 * Database Type
 ```
