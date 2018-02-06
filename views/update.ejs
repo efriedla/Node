@@ -1,0 +1,18 @@
+<% include partials/header%>
+<% include partials/navbar%>
+<div class="container ">
+    <h2><%= todo.task %></h2>
+       <div class="row">
+        <form class="form" action="/todo/<%= todo._id %>?_method=PUT" method="POST">
+            <div class="myform">
+                <label>todo Title:</label>
+                <input class="form-control" type="text" value="<%= todo.task %>" name="task" />
+                
+                
+                <button class="btn btn-success btn-block">sumbit</button>
+            </div>
+        </form>  
+    </div>
+ 
+</div>
+<% include partials/footer%>

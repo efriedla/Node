@@ -84,7 +84,53 @@ app.get("/todo/:id", function(req, res){
         }
     })
 });
-
+/**
+ * Edit
+ * edit route
+ * edit form
+ * add update route
+ * add update form
+ * add Method override
+*/
+app.get("/todo/:id/edit", (req, res) =>{
+    // Post.findById(req.params.id, function(err, found){
+    //   if(err){
+    //     console.log(err);
+    //   }else{
+    //     res.render("update", {todo: found});
+    //   }
+    // });
+    Task.findById(req.params.id, function(err, found){
+        if(err){
+            console.log(err);
+        }else{
+            res.render("update", {todo: found});
+        }
+    })
+    // res.render("update");
+  });
+  //update route
+//   app.put("/todo/:id", (req, res) =>{
+//    Task.findByIdAndUpdate(req.params.id, req.body, function(err, updated){
+//       if(err){
+//         res.redirect("home");
+//       }else{
+//         res.redirect(req.params.id);
+//       }
+//       console.log(req.body);
+//     });
+app.put("/todo/:id", function(req, res){
+    Task.findByIdAndUpdate(req.params.id, req.body, function(err, updated){
+        if(err){
+            res.redirect("home");
+            }else{
+            res.redirect(req.params.id);
+            }
+            console.log(req.body); 
+    });
+// console.log(req.body);
+// res.redirect("todo");
+});
 /** 
 * "error message" 
 */
