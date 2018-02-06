@@ -2,7 +2,11 @@
 <% include partials/navbar%>
 <div>
     <h1><%= todo.task %></h1>
-    <a href="/todo/<%= todo._id %>/edit">Update</a>
+    <a class="btn btn-success" href="/todo/<%= todo._id %>/edit">Update</a>
+    
+    <form action="/todo/<%= todo._id %>?_method=DELETE" method="POST">
+        <button class="btn btn-danger">DELETE</button>
+    </form>
 
 </div>
 

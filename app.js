@@ -131,6 +131,22 @@ app.put("/todo/:id", function(req, res){
 // console.log(req.body);
 // res.redirect("todo");
 });
+
+/** 
+ * delete blog
+ * redirect to blogs
+*/
+app.delete("/todo/:id", function(req, res){
+    // res.send("delete");
+    Task.findByIdAndRemove(req.params.id, function(err){
+    if(err){
+      res.redirect("home");
+    }else{
+      res.redirect("/todo");
+    }
+  });
+    
+});
 /** 
 * "error message" 
 */
