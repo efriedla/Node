@@ -13,10 +13,14 @@ MongoDB
 ```
 * RESTful Routes
 ```
-name         url            verb      desc.
+Name         Url            Verb      Desc.
 ============================================================
-index   /todo         Get         shows all Tasks in db
-New     /todo       Post        shows form to add new Task
-Create  /addtodo        Post        Posts to task in db
-Show    /todo/:id    Get         Shows info of one Task
+index   /todo           Get         shows all Tasks in db
+New     /todo           Get        shows form to add new Task
+Create  /todo           Post        Posts to task in db
+Show    /todo/:id       Get         Shows info of one Task
+Edit    /todo/:id/edit   Get         Show edit form for that Task
+Update  /todo/:id        Put         update in database
+Destroy /todo/:id        DELETE      delete that task
+
 ```
