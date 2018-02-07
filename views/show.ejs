@@ -1,12 +1,23 @@
 <% include partials/header%>
 <% include partials/navbar%>
-<div>
-    <h1><%= todo.task %></h1>
-    <a class="btn btn-success" href="/todo/<%= todo._id %>/edit">Update</a>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 col-md-12 ">
+            <h1><%= todo.task %></h1>
+        </div>
+        <div class="col-sm-1 col-md-1">
+            <a class="btn btn-success" href="/todo/<%= todo._id %>/edit">Update</a>
+        </div>
+        <div class="col-sm-1 col-md-1">
+            <form action="/todo/<%= todo._id %>?_method=DELETE" method="POST">
+                <button class="btn btn-danger">DELETE</button>
+            </form>
+        </div>
+    </div>
     
-    <form action="/todo/<%= todo._id %>?_method=DELETE" method="POST">
-        <button class="btn btn-danger">DELETE</button>
-    </form>
+    
+
+  
 
 </div>
 
