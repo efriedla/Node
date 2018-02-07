@@ -20,3 +20,7 @@
 .img-fluid{
     width: 100%;
 }
+.three{
+    max-height: 500px;
+    min-height: 500px;
+}
