@@ -9,3 +9,14 @@
     border: 1px solid #888888;
     border-radius: 5%;
 }
+.card-text{
+    padding: 10px, 20px;
+    margin-left:20px;
+    margin-top: 10px;
+}
+.carousel{
+    margin-top: -20px;
+}
+.img-fluid{
+    width: 100%;
+}

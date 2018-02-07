@@ -1,11 +1,6 @@
 <% include partials/header%>
 <% include partials/navbar%>
-<div class="jumbotron jumbotron-fluid">
-  <div class="container">
-    <h1 class="display-4">Todo List</h1>
-    <p class="lead">Yes this is a landing page for a Todo list</p>
-  </div>
-</div>
+
    <!-- START THE FEATURETTES -->
 
  
@@ -53,9 +48,15 @@
   </div>
 
 
-
+<br>
 
         <!-- /END THE FEATURETTES -->
+        <div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Todo List</h1>
+    <p class="lead">Yes this is a landing page for a Todo list</p>
+  </div>
+</div>
 <br>
 
 
@@ -65,7 +66,7 @@
         <div class="col-sm-4 col-md-4">
             <div class="card" >
             <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYg9RQ6RmU23dZzq6I5gql4VDq_UHDudb8tdZY7DchU0NzScs4" alt="Card image cap">
-            <div class="card-body">
+            <div class="card-body ">
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
             </div>
             </div>
@@ -73,7 +74,7 @@
         <div class="col-sm-4 col-md-4">
                 <div class="card">
                     <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2fAa2l5AR74EAAlQb8hVKuT8gHBE9CkHH5MYbd2hK3hSTm55zig" alt="Card image cap">
-                    <div class="card-body">
+                    <div class="card-body ">
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     </div>
                 </div>
@@ -88,16 +89,26 @@
         </div>
     </div>
 
-<br>
+    <hr class="featurette-divider">
+
       </div>
-  
     <div class="row featurette">
-          <div class="col-md-7">
+        <div class="col-md-7 col-sm-7 col-xs-12">
+            <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
+            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        </div>
+        <div class="col-md-5 col-sm-5 col-xs-12">
+            <img src="http://www.inspirational.quotesms.com/inspirational/inspirational-images3.jpg" alt="img" class="img-fluid" >
+        </div>
+    </div>
+  
+    <!--<div class="row featurette">
+          <div class="col-md-7 col-sm-7">
             <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
             <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
           </div>
-          <div class="col-md-5">
-            <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500" style="width: 500px; height: 500px;" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22500%22%20height%3D%22500%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20500%20500%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_16171d2c332%20text%20%7B%20fill%3A%23AAAAAA%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A25pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_16171d2c332%22%3E%3Crect%20width%3D%22500%22%20height%3D%22500%22%20fill%3D%22%23EEEEEE%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22185.125%22%20y%3D%22261.1%22%3E500x500%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true">
+          <div class="col-md-5 col-sm-5 col-xs-5">
+            <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22500%22%20height%3D%22500%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20500%20500%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_16171d2c332%20text%20%7B%20fill%3A%23AAAAAA%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A25pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_16171d2c332%22%3E%3Crect%20width%3D%22500%22%20height%3D%22500%22%20fill%3D%22%23EEEEEE%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22185.125%22%20y%3D%22261.1%22%3E500x500%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true">
           </div>
      </div>
     <hr class="featurette-divider">
@@ -119,29 +130,7 @@
           <div class="col-md-5">
             <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22500%22%20height%3D%22500%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20500%20500%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_16171d2c339%20text%20%7B%20fill%3A%23AAAAAA%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A25pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_16171d2c339%22%3E%3Crect%20width%3D%22500%22%20height%3D%22500%22%20fill%3D%22%23EEEEEE%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22185.125%22%20y%3D%22261.1%22%3E500x500%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true" style="width: 500px; height: 500px;">
           </div>
-    </div>
-    <div class="row align-items-center">
-         <div class="col-md-4">
-        One of three columns
-        </div>
-        <div class="col-md-4">
-        One of three columns
-        </div>
-        <div class="col-md-4">
-        One of three columns
-        </div>
-    </div>
-    <div class="row align-items-end">
-       <div class="col-md-4">
-        One of three columns
-        </div>
-        <div class="col-md-4">
-        One of three columns
-        </div>
-        <div class="col-md-4">
-        One of three columns
-        </div>
-    </div>
+    </div>-->
     
 </div>
 
