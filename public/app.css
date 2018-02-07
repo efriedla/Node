@@ -24,3 +24,16 @@
     max-height: 500px;
     min-height: 500px;
 }
+.up-left{
+   
+    left: -47% !important;
+    top: 20% !important;
+}
+.up-right{
+    
+    left: 55% !important;
+    top: 40% !important;
+}
+.up-right a{
+    color: yellow !important;
+}

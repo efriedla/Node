@@ -128,8 +128,6 @@ app.put("/todo/:id", function(req, res){
             }
             console.log(req.body); 
     });
-// console.log(req.body);
-// res.redirect("todo");
 });
 
 /** 
