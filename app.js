@@ -14,14 +14,9 @@ app.use(methodOverride('_method'));
  */ 
 app.set("view engine", "ejs");
 
-var Schema = mongoose.Schema,
-ObjectId = Schema.ObjectId; 
+/** import Task from models/task */
+var Task = require("./models/task");
 
-var taskSchema = new Schema({
-task: String
-});
-
-var Task = mongoose.model('Task', taskSchema);
 
 // Task.create({
 //     task: "sleep"
