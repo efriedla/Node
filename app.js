@@ -4,9 +4,7 @@ var app = express();
 var request = require("request");
 var bodyparser = require("body-parser");
 var mongoose = require("mongoose");
-mongoose.connect(
-"mongodb://mrTodo:20852@ds229458.mlab.com:29458/todo_restful_routes"
-);
+mongoose.connect('mongodb://localhost/todo');
 
 app.use(bodyparser.urlencoded({extended: true}));
 app.use(express.static("public"));
